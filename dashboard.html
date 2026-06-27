@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* NAVBAR CONTAINER */
+.top-nav {
+  display: flex;
+  justify-content: space-between; /* left + right split */
+  align-items: center;
+  padding: 15px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* BUTTON STYLE */
+.top-nav button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.top-nav button:hover {
+  background: #2f89fc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(47,137,252,0.3);
+}
+
+/* LEFT + RIGHT ALIGNMENT */
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+  <h1>Dashboard</h1>
+    
+  <!-- <div class="top-nav">
+  <button onclick="goCourses()">Courses</button>
+  <button onclick="logout()">Logout</button>
+</div> -->
+<div class="top-nav">
+
+  <!-- LEFT SIDE -->
+  <div class="nav-left">
+    <button onclick="goHome()">Home</button>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="nav-right">
+    <button onclick="goCourses()">Courses</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+</div>
+
+  <h2 id="welcome"></h2>
+
+  <h2 style="font-size: large; padding-bottom: 20px;">My Courses</h2>
+  <div id="dashboardCourses"></div>
+
+  
+  
+
+<h2 style="padding-top: 30px; font-size: large;">Analytics Dashboard</h2>
+
+<div class="chart-grid">
+
+  <!-- 📊 Progress Pie (your existing chart) -->
+  <div class="chart-box">
+    <h3 style="font-size: medium;">Overall Progress</h3>
+    <canvas id="progressChart"></canvas>
+  </div>
+
+  <!-- 🍩 Donut Chart -->
+  <div class="chart-box">
+    <h3 style="font-size: medium;">Course Distribution</h3>
+    <canvas id="donutChart"></canvas>
+  </div>
+
+  <!-- 📈 Line Chart -->
+  <div class="chart-box">
+    <h3 style="font-size: medium;">Learning Trend</h3>
+    <canvas id="lineChart"></canvas>
+  </div>
+
+  <!-- 📊 Bar Chart
+  <div class="chart-box">
+    <h3>Progress Comparison</h3>
+    <canvas id="barChart"></canvas>
+  </div> -->
+
+</div>
+  <!-- <br>
+  <button onclick="logout()">Logout</button> -->
+</div>
+
+  <!-- ========== Start contact home Section ========== -->
+
+    <div class="section-contact--homepage" id="section-contact--homepage">
+      <div class="container grid grid-two--cols">
+        <div class="contact-content">
+          <h2 class="contact-title">Let's revolutionize the way you study</h2>
+          <p>Join our free bootcamps to know us better</p>
+          <div class="btn">
+            <a href="contact.html">
+              start now <i class="fa-solid fa-arrow-circle-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="contact-image">
+          <img src="images/main.png" alt="a guy doing coding" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== End contact home Section ========== -->
+
+    <!-- ========== Start   FOOTER Section ========== -->
+
+   <footer>
+      <div class="container grid grid-four--cols">
+        <div class="footer-1--div">
+          <div class="logo-brand">
+            <a href="index.html" class="footer-subheading">E-Learning</a>
+          </div>
+          <p>Let's revolutionize the way you study with E-Learning</p>
+       
+
+        <div class="social-footer--icons">
+          <a href="" target="_blank" alt="my discord server link" >
+            <i class="fa-brands fa-discord"></i>
+            </a>
+            <a href="" target="_blank" alt="my youtube channel link" >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="" target="_blank" alt="my instagram profile link" >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
+      </div>
+
+      <div class="footer-2--div">
+        <p class="footer-subheading">  Courses </p>
+          <ul>
+            <li> <a href="index.html"> java </a> </li>
+            <li> <a href="index.html"> sql </a> </li>
+            <li> <a href="index.html"> python </a> </li>
+            <li> <a href="index.html"> html </a> </li>
+            <li> <a href="index.html"> javascript </a> </li>
+          </ul>
+      
+      </div>
+
+
+      <div class="footer-3--div">
+       <p class="footer-subheading">Links</p>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="service.html">Courses</a></li>
+  <li><a href="dashboard.html">Dashboard</a></li>
+  <li><a href="learn.html">My Learning</a></li>
+  <li><a href="login.html">Login / Signup</a></li>
+</ul>
+      
+      </div>
+
+      <div class="footer-4--div">
+       <p class="footer-subheading">Blogs</p>
+
+<ul>
+  <li><a href="#">HTML Basics Guide</a></li>
+  <li><a href="#">CSS Flexbox Tutorial</a></li>
+  <li><a href="#">JavaScript DOM Explained</a></li>
+  <li><a href="#">How Login Systems Work</a></li>
+  <li><a href="#">LocalStorage in Web Apps</a></li>
+</ul>
+       
+      </div>
+
+      </div>
+    </footer>
+    <!-- ========== End   FOOTER Section ========== -->
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
